@@ -1,67 +1,66 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`SupplySummaly Snapshot 1`] = `
+exports[`SupplySummary Snapshot 1`] = `
 <body>
   <div>
     <div
-      class="re975l-0"
+      class="re975l-7 JPStL"
     >
+      <h2>
+        Current Staking Rewards
+      </h2>
       <div
-        class="re975l-1 jJJMXg"
+        class="re975l-5 dqaFMD"
       >
-        <span>
-          APY for Stakers:
-        </span>
-        <span
-          class="re975l-2 bQJvIN"
+        <div
+          class="re975l-6 jnaSZR"
         >
           <span
-            class="re975l-3 fXWjDh"
+            class="re975l-2 bQJvIN"
           >
             1
-          </span>
-          <span
-            class="re975l-4 mgeDF"
-          >
-            0
             %
           </span>
-        </span>
-      </div>
-      <div
-        class="re975l-1 jJJMXg"
-      >
-        <span>
-          APY for Creators:
-        </span>
-        <span
-          class="re975l-2 bQJvIN"
-        >
-          -
-        </span>
-      </div>
-      <div
-        class="re975l-1 jJJMXg"
-      >
-        <span>
-          Annual Supply Growth:
-        </span>
-        <span
-          class="re975l-2 bQJvIN"
+          <label>
+            Stakers APY
+          </label>
+        </div>
+        <div
+          class="re975l-6 jnaSZR"
         >
           <span
-            class="re975l-3 fXWjDh"
+            class="re975l-2 bQJvIN"
+          >
+            %
+          </span>
+          <label>
+            Creators APY
+          </label>
+          <a
+            href="https://docs.devprtcl.com/protocol/tokenomics"
+            rel="noopener noreferrer"
+            target="_blank"
+          >
+            Learn more
+          </a>
+        </div>
+        <div
+          class="re975l-6 jnaSZR"
+        >
+          <span
+            class="re975l-2 bQJvIN"
           >
             1
-          </span>
-          <span
-            class="re975l-4 mgeDF"
-          >
-            0
             %
           </span>
-        </span>
+          <label>
+            DEV ASG
+          </label>
+        </div>
       </div>
+      <hr
+        color="lightgrey"
+      />
     </div>
   </div>
 </body>

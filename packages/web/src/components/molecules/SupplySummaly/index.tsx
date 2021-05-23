@@ -9,14 +9,6 @@ interface Props {
   className?: string
 }
 
-const Wrap = styled.div``
-const Badge = styled.div`
-  display: grid;
-  grid-auto-flow: column;
-  justify-content: start;
-  align-items: center;
-  grid-gap: 0.5rem;
-`
 const Statistics = styled.span`
   font-size: 1.5em;
   @media (min-width: 1024px) {
@@ -27,25 +19,6 @@ const Statistics = styled.span`
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 `
-const StatisticsInt = styled.span`
-  letter-spacing: 0.1rem;
-`
-const StatisticsDecimal = styled.span`
-  font-weight: normal;
-  font-size: 0.9em;
-`
-
-const int = (v: BigNumber): string => v.integerValue(BigNumber.ROUND_DOWN).toString()
-const decimal = (v: BigNumber): string => v.minus(v.integerValue(BigNumber.ROUND_DOWN)).toString().replace('0.', '.')
-const values = (v?: BigNumber, dp?: number) =>
-  v ? (
-    <>
-      <StatisticsInt>{int(v)}</StatisticsInt>
-      <StatisticsDecimal>{decimal(v.dp(dp || 5))}%</StatisticsDecimal>
-    </>
-  ) : (
-    '-'
-  )
 
 const SupplySummaryContainer = styled.div`
   display: grid;
@@ -101,24 +74,5 @@ export const SupplySummary = ({ apy, creators, annualSupplyGrowthRatio, classNam
       </SupplySummaryContainer>
       <hr color="lightgrey" />
     </Container>
-  )
-}
-
-export const SupplySummaly = ({ apy, creators, annualSupplyGrowthRatio }: Props) => {
-  return (
-    <Wrap>
-      <Badge>
-        <span>APY for Stakers:</span>
-        <Statistics>{values(apy, 5)}</Statistics>
-      </Badge>
-      <Badge>
-        <span>APY for Creators:</span>
-        <Statistics>{values(creators, 5)}</Statistics>
-      </Badge>
-      <Badge>
-        <span>Annual Supply Growth:</span>
-        <Statistics>{values(annualSupplyGrowthRatio, 5)}</Statistics>
-      </Badge>
-    </Wrap>
   )
 }
